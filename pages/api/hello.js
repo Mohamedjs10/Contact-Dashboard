@@ -1,5 +1,10 @@
-// Next.js API route support: https://locahost/api
+import main from "../database/connection";
+import Sarwa from "../database/schema";
 
 export default function handler(req, res) {
-  res.status(200).json({ name: "John Doe" });
+  main().catch((err) => console.log(err));
+  const create = new Sarwa({ name: "Ali Shaheen" });
+  create.save().then(() => {
+    res.status(200).json(create);
+  });
 }
