@@ -64,6 +64,11 @@ function EditModal({ openEdit, handleCloseEdit }) {
               label="Image URL"
               variant="outlined"
             />
+            <TextField
+              id="outlined-basic"
+              label="Entry Order"
+              variant="outlined"
+            />
             <Button
               variant="contained"
               endIcon={<DoneOutlineIcon />}

@@ -10,12 +10,17 @@ import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import Box from "@mui/material/Box";
+
 import EditIcon from "@mui/icons-material/Edit";
+
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
-import AddModal from "../mini/AddModal";
-import ContentTitle from "../mini/ContentTitle";
 
+import ContentTitle from "../mini/ContentTitle";
+import AddModal from "../mini/AddModal";
+import EditModal from "../mini/EditModal";
+import TimingAlert from "../mini/TimingAlert";
+import DialogBox from "../mini/DialogBox";
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: "#101F33",
@@ -37,6 +42,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 function createData(
+  order,
   titleEn,
   titleAr,
   date,
@@ -46,6 +52,7 @@ function createData(
   imgUrlAr
 ) {
   return {
+    order,
     titleEn,
     titleAr,
     date,
@@ -58,6 +65,7 @@ function createData(
 
 const rows = [
   createData(
+    1,
     "Announcement for Policy Holders",
     "إعلان هام لحملة الوثائق",
     "29/09/2022",
@@ -69,55 +77,108 @@ const rows = [
 ];
 
 export default function contentTable() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+  // const tab = useSelector((state) => state.tab.tab);
+  const [openAdd, setOpenAdd] = React.useState(false);
+  const handleOpenAdd = () => setOpenAdd(true);
+  const handleCloseAdd = () => setOpenAdd(false);
+  const [openEdit, setOpenEdit] = React.useState(false);
+  const handleOpenEdit = () => setOpenEdit(true);
+  const handleCloseEdit = () => setOpenEdit(false);
+  const [alert, setAlert] = React.useState(false);
+  const [openDialog, setOpenDialog] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpenDialog(true);
+  };
+  const handleCloseAgree = () => {
+    setOpenDialog(false);
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 2000);
+  };
+  const handleCloseDisagree = () => {
+    setOpenDialog(false);
+  };
   return (
     <>
-      <AddModal open={open} handleClose={handleClose}></AddModal>
-      <ContentTitle></ContentTitle>
+      <DialogBox
+        openDialog={openDialog}
+        handleCloseAgree={handleCloseAgree}
+        handleCloseDisagree={handleCloseDisagree}
+        setAlert={setAlert}
+      ></DialogBox>
+      <AddModal openAdd={openAdd} handleCloseAdd={handleCloseAdd}></AddModal>
+      <EditModal
+        openEdit={openEdit}
+        handleCloseEdit={handleCloseEdit}
+      ></EditModal>
+      <Box sx={{ display: "flex", justifyContent: "space-between", m: 1 }}>
+        <ContentTitle></ContentTitle>
+        {alert && <TimingAlert></TimingAlert>}
+      </Box>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Title (en)</Box>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 150 }}
+              >
+                Order
               </StyledTableCell>
-              <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Title (ar)</Box>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 150 }}
+              >
+                Title (en)
               </StyledTableCell>
-              <StyledTableCell sx={{ width: 400 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Date</Box>
-              </StyledTableCell>{" "}
-              <StyledTableCell sx={{ width: 400 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>
-                  Description (en)
-                </Box>
-              </StyledTableCell>{" "}
-              <StyledTableCell sx={{ width: 400 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>
-                  Description (ar)
-                </Box>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 150 }}
+              >
+                Title (ar)
               </StyledTableCell>
-              <StyledTableCell sx={{ width: 400 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>
-                  Image URL (en)
-                </Box>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 100 }}
+              >
+                Date
               </StyledTableCell>
-              <StyledTableCell sx={{ width: 400 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>
-                  Image URL (ar)
-                </Box>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 200 }}
+              >
+                Description (en)
               </StyledTableCell>
-              <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Control</Box>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 200 }}
+              >
+                Description (ar)
               </StyledTableCell>
-              <StyledTableCell sx={{ width: 10 }}>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 200 }}
+              >
+                Image URL (en)
+              </StyledTableCell>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 200 }}
+              >
+                Image URL (ar)
+              </StyledTableCell>
+              <StyledTableCell
+                align="center"
+                sx={{ fontWeight: "bold", fontSize: 16, width: 200 }}
+              >
+                Control
+              </StyledTableCell>
+              <StyledTableCell align="center">
                 <Box
                   sx={{
                     fontWeight: "bold",
-                    fontSize: 18,
+                    fontSize: 16,
                     "& .MuiButtonBase-root": {
                       color: "white",
                     },
@@ -126,7 +187,7 @@ export default function contentTable() {
                   <IconButton sx={{ borderRadius: "50%", p: "8px" }}>
                     <AddCircleIcon
                       sx={{ fontSize: 40, color: "#27A4FF" }}
-                      onClick={handleOpen}
+                      onClick={handleOpenAdd}
                     ></AddCircleIcon>
                   </IconButton>
                 </Box>
@@ -135,33 +196,67 @@ export default function contentTable() {
           </TableHead>
           <TableBody>
             {rows.map((row) => (
-              <StyledTableRow key={row.name}>
-                <StyledTableCell component="th" scope="row">
+              <StyledTableRow key={row.order}>
+                <StyledTableCell
+                  component="th"
+                  scope="row"
+                  sx={{ textAlign: "center" }}
+                >
+                  {row.order}
+                </StyledTableCell>
+                <StyledTableCell
+                  component="th"
+                  scope="row"
+                  sx={{ textAlign: "center" }}
+                >
                   {row.titleEn}
                 </StyledTableCell>
                 <StyledTableCell
                   component="th"
                   scope="row"
-                  sx={{ textAlign: "right" }}
+                  sx={{ textAlign: "center" }}
                 >
                   {row.titleAr}
                 </StyledTableCell>
-                <StyledTableCell component="th" scope="row">
+                <StyledTableCell sx={{ textAlign: "center" }}>
+                  {" "}
                   {row.date}
                 </StyledTableCell>
-                <StyledTableCell>{row.descriptionEn}</StyledTableCell>
-                <StyledTableCell sx={{ textAlign: "right" }}>
+                <StyledTableCell sx={{ textAlign: "center" }}>
+                  {" "}
+                  {row.descriptionEn}
+                </StyledTableCell>
+                <StyledTableCell sx={{ textAlign: "center" }}>
                   {row.descriptionAr}
                 </StyledTableCell>
-                <StyledTableCell>{row.imgUrlEn}</StyledTableCell>
-                <StyledTableCell>{row.imgUrlAr}</StyledTableCell>
-
-                <StyledTableCell sx={{ display: "flex", gap: 1 }}>
-                  <Button color="primary" variant="outlined">
+                <StyledTableCell
+                  sx={{ textAlign: "center", wordBreak: "break-all" }}
+                >
+                  {row.imgUrlEn}
+                </StyledTableCell>
+                <StyledTableCell
+                  sx={{ textAlign: "center", wordBreak: "break-all" }}
+                >
+                  {row.imgUrlAr}
+                </StyledTableCell>
+                <StyledTableCell
+                  sx={{ display: "flex", justifyContent: "center", gap: 1 }}
+                >
+                  <Button
+                    color="success"
+                    variant="outlined"
+                    onClick={handleOpenEdit}
+                  >
                     <EditIcon></EditIcon>
                   </Button>
 
-                  <Button color="error" variant="outlined">
+                  <Button
+                    color="error"
+                    variant="outlined"
+                    onClick={() => {
+                      setOpenDialog(true);
+                    }}
+                  >
                     <DeleteIcon></DeleteIcon>
                   </Button>
                 </StyledTableCell>
