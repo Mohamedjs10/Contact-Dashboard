@@ -2,7 +2,7 @@ import main from "../database/connection";
 import Sarwa from "../database/schema"; // Model => Sarwa
 
 export default async function handler(req, res) {
-  // main().catch((err) => console.log(err));
+  main().catch((err) => console.log(err));
   // const member = new Sarwa({ name: "Ali Shaheen", age: 20 });
   // member.save().then(() => {
   //   // adding
@@ -49,15 +49,15 @@ export default async function handler(req, res) {
   //   console.log(err);
   // }
   //---------
-  // Sarwa.updateMany(
-  //   { order: { $gt: 1 } },
-  //   { $inc: { order: 1 } },
-  //   function (err, docs) {
-  //     if (err) {
-  //       console.log(err);
-  //     } else {
-  //       console.log("Updated Docs : ", docs);
-  //     }
-  //   }
-  // );
+  Sarwa.updateMany(
+    { order: { $gt: 1 } },
+    { $inc: { order: 1 } },
+    function (err, docs) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("Updated Docs : ", docs);
+      }
+    }
+  );
 }
