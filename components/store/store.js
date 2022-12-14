@@ -16,7 +16,6 @@ const btnSlice = createSlice({
   reducers: {
     update(state, action) {
       state.btn = action.payload;
-      console.log(state.btn);
     },
   },
 });

@@ -25,6 +25,9 @@ function Header(props) {
   console.log(btn);
 
   const { onDrawerToggle } = props;
+  // fetch("http://localhost:3000/api/sarwa-insurance/about")
+  //   .then((x) => x.json())
+  //   .then((x) => console.log(x.data.sarwa_insurance.about_page));
 
   return (
     <React.Fragment>

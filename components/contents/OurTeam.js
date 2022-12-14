@@ -15,6 +15,21 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import ContentTitle from "../mini/ContentTitle";
 import AddModal from "../mini/AddModal";
+import EditModal from "../mini/EditModal";
+import TimingAlert from "../mini/TimingAlert";
+import DialogBox from "../mini/DialogBox";
+import CircularProgress from "@mui/material/CircularProgress";
+import useSWR from "swr";
+import { useSelector, useDispatch } from "react-redux";
+
+const fetcherInsurance = (...args) =>
+  fetch(...args)
+    .then((res) => res.json())
+    .then((res) => res.data.sarwa_insurance.about_page.our_team);
+const fetcherLife = (...args) =>
+  fetch(...args)
+    .then((res) => res.json())
+    .then((res) => res.data.sarwa_life.about_page.our_team);
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -36,35 +51,71 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(nameEn, nameAr, positionEn, positionAr, imgurl) {
-  return { nameEn, nameAr, positionEn, positionAr, imgurl };
-}
-
-const rows = [
-  createData(
-    "Hazem Mousa",
-    "حمزة موسى",
-    "Chairman",
-    "رئيس",
-    "https://contact-clients-dev.s3.amazonaws.com/HazemMoussa.png"
-  ),
-];
-
 export default function contentTable() {
-  // const tab = useSelector((state) => state.tab.tab);
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const tab = useSelector((state) => state.tab.tab);
+  const btn = useSelector((state) => state.btn.btn);
+  console.log(tab, btn); // Our Team - 0 (insurance)
+  const [openAdd, setOpenAdd] = React.useState(false);
+  const handleOpenAdd = () => setOpenAdd(true);
+  const handleCloseAdd = () => setOpenAdd(false);
+  const [openEdit, setOpenEdit] = React.useState(false);
+  const handleOpenEdit = () => setOpenEdit(true);
+  const handleCloseEdit = () => setOpenEdit(false);
+  const [alert, setAlert] = React.useState(false);
+  const [openDialog, setOpenDialog] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpenDialog(true);
+  };
+  const handleCloseAgree = () => {
+    setOpenDialog(false);
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 2000);
+  };
+  const handleCloseDisagree = () => {
+    setOpenDialog(false);
+  };
+
+  const {
+    data: dataInsurance,
+    error: errorInsurance,
+    isLoading: isLoadingInsurance,
+  } = useSWR("/api/sarwa-insurance/about", fetcherInsurance);
+  const {
+    data: dataLife,
+    error: errorLife,
+    isLoading: isLoadingLife,
+  } = useSWR("/api/sarwa-life/about", fetcherLife);
+  const data = btn === 0 ? dataInsurance : dataLife;
+  const isLoading = btn === 0 ? isLoadingInsurance : isLoadingLife;
+  console.log(dataInsurance, dataLife);
 
   return (
     <>
-      <AddModal open={open} handleClose={handleClose}></AddModal>
+      <DialogBox
+        openDialog={openDialog}
+        handleCloseAgree={handleCloseAgree}
+        handleCloseDisagree={handleCloseDisagree}
+        setAlert={setAlert}
+      ></DialogBox>
+      <AddModal openAdd={openAdd} handleCloseAdd={handleCloseAdd}></AddModal>
+      <EditModal
+        openEdit={openEdit}
+        handleCloseEdit={handleCloseEdit}
+      ></EditModal>
 
-      <ContentTitle></ContentTitle>
+      <Box sx={{ display: "flex", justifyContent: "space-between", m: 1 }}>
+        <ContentTitle></ContentTitle>
+        {alert && <TimingAlert></TimingAlert>}
+      </Box>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
             <TableRow>
+              <StyledTableCell sx={{ width: 250 }}>
+                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Index</Box>
+              </StyledTableCell>
               <StyledTableCell sx={{ width: 250 }}>
                 <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Name (en)</Box>
               </StyledTableCell>
@@ -100,7 +151,7 @@ export default function contentTable() {
                   <IconButton sx={{ borderRadius: "50%", p: "8px" }}>
                     <AddCircleIcon
                       sx={{ fontSize: 40, color: "#27A4FF" }}
-                      onClick={handleOpen}
+                      onClick={handleOpenAdd}
                     ></AddCircleIcon>
                   </IconButton>
                 </Box>
@@ -108,29 +159,59 @@ export default function contentTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
-                <StyledTableCell component="th" scope="row">
-                  {row.nameEn}
+            {isLoading ? (
+              <StyledTableRow>
+                <StyledTableCell component="th" scope="row" colSpan={8}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <CircularProgress />
+                  </Box>
                 </StyledTableCell>
-                <StyledTableCell component="th" scope="row">
-                  {row.nameAr}
-                </StyledTableCell>
-                <StyledTableCell> {row.positionEn}</StyledTableCell>
-                <StyledTableCell> {row.positionAr}</StyledTableCell>
-                <StyledTableCell>{row.imgurl}</StyledTableCell>
-                <StyledTableCell sx={{ display: "flex", gap: 1 }}>
-                  <Button color="primary" variant="outlined">
-                    <EditIcon></EditIcon>
-                  </Button>
-
-                  <Button color="error" variant="outlined">
-                    <DeleteIcon></DeleteIcon>
-                  </Button>
-                </StyledTableCell>
-                <StyledTableCell></StyledTableCell>
               </StyledTableRow>
-            ))}
+            ) : (
+              data.map((member, index) => (
+                <StyledTableRow key={index + 1}>
+                  <StyledTableCell component="th" scope="row">
+                    {index + 1}
+                  </StyledTableCell>
+                  <StyledTableCell component="th" scope="row">
+                    {member.name.en}
+                  </StyledTableCell>
+                  <StyledTableCell component="th" scope="row">
+                    {member.name.ar}
+                  </StyledTableCell>
+                  <StyledTableCell> {member.position.en}</StyledTableCell>
+                  <StyledTableCell> {member.position.ar}</StyledTableCell>
+                  <StyledTableCell>{member.imgUrl}</StyledTableCell>
+                  <StyledTableCell>
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <Button
+                        color="success"
+                        variant="outlined"
+                        onClick={handleOpenEdit}
+                      >
+                        <EditIcon></EditIcon>
+                      </Button>
+                      <Button
+                        color="error"
+                        variant="outlined"
+                        onClick={() => {
+                          setOpenDialog(true);
+                        }}
+                      >
+                        <DeleteIcon></DeleteIcon>
+                      </Button>
+                    </Box>
+                  </StyledTableCell>
+                  <StyledTableCell></StyledTableCell>
+                </StyledTableRow>
+              ))
+            )}
           </TableBody>
         </Table>
       </TableContainer>

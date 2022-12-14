@@ -13,11 +13,17 @@ export default async function handler(req, res) {
   });
 
   main().catch((err) => console.log(err));
+  // try {
+  //   const result = await Sarwa.find();
+  //   if (!result.length) res.status(404).send({ message: "Not found data" });
+  //   else res.status(200).json({ result });
+  // } catch (err) {
+  //   res.status(500).json({ error: "failed to load data" });
+  // }
   try {
-    const result = await Sarwa.find();
     if (!result.length) res.status(404).send({ message: "Not found data" });
     else res.status(200).json({ result });
   } catch (err) {
-    res.status(500).json({ error: "failed to load data" });
+    res.status(500).json({ error: "failed to load data 2 2" });
   }
 }

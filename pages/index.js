@@ -1,5 +1,19 @@
+import React, { useState } from "react";
+import Login from "../components/Login";
 import Paperbase from "../components/paperbase";
-
+import Box from "@mui/material/Box";
 export default function Home() {
-  return <Paperbase />;
+  const [authenticated, setauthenticated] = useState(false);
+
+  return (
+    <>
+      {!authenticated ? (
+        <Box sx={{ backgroundColor: "#dfe3ee" }}>
+          <Login setauthenticated={setauthenticated}></Login>
+        </Box>
+      ) : (
+        <Paperbase />
+      )}
+    </>
+  );
 }

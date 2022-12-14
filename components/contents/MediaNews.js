@@ -77,7 +77,6 @@ const rows = [
 ];
 
 export default function contentTable() {
-  // const tab = useSelector((state) => state.tab.tab);
   const [openAdd, setOpenAdd] = React.useState(false);
   const handleOpenAdd = () => setOpenAdd(true);
   const handleCloseAdd = () => setOpenAdd(false);
