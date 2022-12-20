@@ -1,0 +1,47 @@
+[
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsMotor.jpg",
+    "title": { "en": "Motor Insurance", "ar": "تأمين السيارات" },
+    "subtitle": {
+      "en": "We Keep You Driving Forward",
+      "ar": "نجعلك دائماً تقود إلى الأمام"
+    },
+    "text": {
+      "en": "Driving becomes more reassuring when you know your vehicle is protected and insured. SARWA Motor Insurance policy offers comprehensive coverage for your car.",
+      "ar": "نحن نجعلك مطمئناً وأنت تقود سيارتك، وثيقتنا توفر حماية شاملة لسيارتك في حالة وقوع حادث لا قدر الله يكون هدفنا إعادة مالك السيارة إلى  قيادة سيارته مجدداً  بأسرع ما يمكن وبأقل قدر من الإزعاج بفضل تعاقدنا مع أفضل مقدمي خدمات الطريق"
+    },
+    "imgRight": false,
+    "proLink": "/sarwa-insurance/product/motorInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsHome.jpg",
+    "title": { "en": "Home Insurance Plan", "ar": "تأمين المنزل" },
+    "subtitle": {
+      "en": "Designed To Protect Your Home",
+      "ar": "وثيقة مصممة خصيصاً لحماية منزلك"
+    },
+    "text": {
+      "en": "On planning protection against losses occurring in your home and its content, SARWA Insurance puts in an intensely comprehensive package.",
+      "ar": "وثيقة ثروة للتأمين تقدم تغطية شاملة لمنزلك أو محتوياته حيث تغطي الفقد أو التلف الذي قد يحدث للمنزل أو محتوياته نتيجة حريق أو برق أو حريق ناتج عن انفجار"
+    },
+    "imgRight": true,
+    "proLink": "/sarwa-insurance/product/homeInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsPersonal.jpg",
+    "title": {
+      "en": "Personal Accidents & Life Style",
+      "ar": "تأمين الحوادث الشخصية ونمط الحياة"
+    },
+    "subtitle": {
+      "en": "Helps You to Focus On Recovery Not Finances",
+      "ar": "نساعدك على أن تركز على التعافي فقط,  اترك النفقات علينا"
+    },
+    "text": {
+      "en": "Since accidents come suddenly, preparing yourself with financial support might be the smart and wise decision. When opting for a PA.",
+      "ar": "إنه من الحكمة دوماً ان تكون مستعد مالياً للمفاجأة الغير سارة، تقدم لك ثروة للتأمين وثيقة توفر لك الحماية المالية الكاملة في حالة وقوع حادث لا قدر الله حيث تغطي الأخطار المحتملة مثل الوفاة أو الإصابات أو العجز بسبب حوادث"
+    },
+    "imgRight": false,
+    "proLink": ""
+  }
+]

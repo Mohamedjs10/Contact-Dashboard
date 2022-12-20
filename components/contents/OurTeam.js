@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -20,16 +21,10 @@ import TimingAlert from "../mini/TimingAlert";
 import DialogBox from "../mini/DialogBox";
 import CircularProgress from "@mui/material/CircularProgress";
 import useSWR from "swr";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
-const fetcherInsurance = (...args) =>
-  fetch(...args)
-    .then((res) => res.json())
-    .then((res) => res.data.sarwa_insurance.about_page.our_team);
-const fetcherLife = (...args) =>
-  fetch(...args)
-    .then((res) => res.json())
-    .then((res) => res.data.sarwa_life.about_page.our_team);
+const fetcherInsurance = (...args) => fetch(...args).then((res) => res.json());
+const fetcherLife = (...args) => fetch(...args).then((res) => res.json());
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -59,16 +54,22 @@ export default function contentTable() {
   const handleOpenAdd = () => setOpenAdd(true);
   const handleCloseAdd = () => setOpenAdd(false);
   const [openEdit, setOpenEdit] = React.useState(false);
-  const handleOpenEdit = () => setOpenEdit(true);
+
   const handleCloseEdit = () => setOpenEdit(false);
   const [alert, setAlert] = React.useState(false);
   const [openDialog, setOpenDialog] = React.useState(false);
-  const handleClickOpen = () => {
-    setOpenDialog(true);
-  };
+  const [currentId, setCurrentId] = React.useState();
+
   const handleCloseAgree = () => {
     setOpenDialog(false);
     setAlert(true);
+    fetch("http://localhost:3000/api/sarwa/insurance/teams", {
+      method: "DELETE",
+      body: JSON.stringify({
+        _id: currentId,
+      }),
+    });
+
     setTimeout(() => {
       setAlert(false);
     }, 2000);
@@ -81,15 +82,16 @@ export default function contentTable() {
     data: dataInsurance,
     error: errorInsurance,
     isLoading: isLoadingInsurance,
-  } = useSWR("/api/sarwa-insurance/about", fetcherInsurance);
+  } = useSWR("/api/sarwa/insurance/teams", fetcherInsurance, {
+    refreshInterval: 100,
+  });
   const {
     data: dataLife,
     error: errorLife,
     isLoading: isLoadingLife,
-  } = useSWR("/api/sarwa-life/about", fetcherLife);
+  } = useSWR("/api/sarwa/life/teams", fetcherLife, { refreshInterval: 100 });
   const data = btn === 0 ? dataInsurance : dataLife;
   const isLoading = btn === 0 ? isLoadingInsurance : isLoadingLife;
-  console.log(dataInsurance, dataLife);
 
   return (
     <>
@@ -99,10 +101,18 @@ export default function contentTable() {
         handleCloseDisagree={handleCloseDisagree}
         setAlert={setAlert}
       ></DialogBox>
-      <AddModal openAdd={openAdd} handleCloseAdd={handleCloseAdd}></AddModal>
+      <AddModal
+        openAdd={openAdd}
+        setOpenAdd={setOpenAdd}
+        handleCloseAdd={handleCloseAdd}
+        endPoint="teams"
+      ></AddModal>
       <EditModal
         openEdit={openEdit}
+        setOpenEdit={setOpenEdit}
         handleCloseEdit={handleCloseEdit}
+        endPoint="teams"
+        currentId={currentId}
       ></EditModal>
 
       <Box sx={{ display: "flex", justifyContent: "space-between", m: 1 }}>
@@ -113,30 +123,89 @@ export default function contentTable() {
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Index</Box>
+              <StyledTableCell sx={{ width: 150 }}>
+                <Box
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    textAlign: "center",
+                    wordSpacing: "200px",
+                  }}
+                >
+                  Index
+                </Box>
               </StyledTableCell>
               <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Name (en)</Box>
+                <Box
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    textAlign: "center",
+                    wordSpacing: "200px",
+                  }}
+                >
+                  Name (en)
+                </Box>
               </StyledTableCell>
               <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Name (ar)</Box>
+                <Box
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    textAlign: "center",
+                    wordSpacing: "200px",
+                  }}
+                >
+                  Name (ar)
+                </Box>
               </StyledTableCell>
               <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>
+                <Box
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    textAlign: "center",
+                    wordSpacing: "200px",
+                  }}
+                >
                   Position (en)
                 </Box>
               </StyledTableCell>
               <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>
+                <Box
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    textAlign: "center",
+                    wordSpacing: "200px",
+                  }}
+                >
                   Position (ar)
                 </Box>
               </StyledTableCell>
               <StyledTableCell sx={{ width: 400 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Image URL</Box>
+                <Box
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    textAlign: "center",
+                    wordSpacing: "400px",
+                  }}
+                >
+                  Image URL
+                </Box>
               </StyledTableCell>
               <StyledTableCell sx={{ width: 250 }}>
-                <Box sx={{ fontWeight: "bold", fontSize: 18 }}>Control</Box>
+                <Box
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 18,
+                    textAlign: "center",
+                    wordSpacing: "200px",
+                  }}
+                >
+                  Control
+                </Box>
               </StyledTableCell>
               <StyledTableCell sx={{ width: 10 }}>
                 <Box
@@ -176,24 +245,37 @@ export default function contentTable() {
             ) : (
               data.map((member, index) => (
                 <StyledTableRow key={index + 1}>
-                  <StyledTableCell component="th" scope="row">
+                  <StyledTableCell component="th" scope="row" align="center">
                     {index + 1}
                   </StyledTableCell>
-                  <StyledTableCell component="th" scope="row">
+                  <StyledTableCell component="th" scope="row" align="center">
                     {member.name.en}
                   </StyledTableCell>
-                  <StyledTableCell component="th" scope="row">
+                  <StyledTableCell component="th" scope="row" align="center">
                     {member.name.ar}
                   </StyledTableCell>
-                  <StyledTableCell> {member.position.en}</StyledTableCell>
-                  <StyledTableCell> {member.position.ar}</StyledTableCell>
-                  <StyledTableCell>{member.imgUrl}</StyledTableCell>
+                  <StyledTableCell align="center">
+                    {" "}
+                    {member.position.en}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {" "}
+                    {member.position.ar}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {member.imgUrl}
+                  </StyledTableCell>
                   <StyledTableCell>
-                    <Box sx={{ display: "flex", gap: 1 }}>
+                    <Box
+                      sx={{ display: "flex", gap: 1, justifyContent: "center" }}
+                    >
                       <Button
                         color="success"
                         variant="outlined"
-                        onClick={handleOpenEdit}
+                        onClick={() => {
+                          setOpenEdit(true);
+                          setCurrentId(member._id);
+                        }}
                       >
                         <EditIcon></EditIcon>
                       </Button>
@@ -202,6 +284,7 @@ export default function contentTable() {
                         variant="outlined"
                         onClick={() => {
                           setOpenDialog(true);
+                          setCurrentId(member._id);
                         }}
                       >
                         <DeleteIcon></DeleteIcon>

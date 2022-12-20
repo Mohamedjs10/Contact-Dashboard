@@ -1,0 +1,24 @@
+[
+  {
+    "data": {
+      "sarwa_insurance": {
+        "products_page": {
+          "banner": "https://contact-clients-dev.s3.amazonaws.com/ProductsInsBannar.jpg",
+          "cards": {
+            "commercial": [],
+            "retail": []
+          }
+        }
+      },
+      "sarwa_life": {
+        "products_page": {
+          "banner": "https://contact-clients-dev.s3.amazonaws.com/ProductsLiveBannar.jpg",
+          "cards": {
+            "commercial": [],
+            "retail": []
+          }
+        }
+      }
+    }
+  }
+]

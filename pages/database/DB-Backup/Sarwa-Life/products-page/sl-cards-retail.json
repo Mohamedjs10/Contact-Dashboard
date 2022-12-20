@@ -1,0 +1,102 @@
+[
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLifeSaving.jpg",
+    "title": {
+      "en": "Saving & Protection",
+      "ar": "الحياة ثروة (تأمين مؤقت محدد المدة)"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "Our unique individual product provides saving & protection flexible coverages. On the saving front, the insured can choose a targeted saving amount that suits his different future needs such as retirement, children's marriage & education cost. On the insurance side, the insured can choose the required protection amount, which can be extended in case of death up to age 85, and for critical illnesses & disability up to age 65.",
+      "ar": "منتج متميز للعملاء الأفراد حيث يقدم الحماية التأمينية ومزايا الادخار حيث يتمكن المؤمن عليه من خلال هذا البرنامج من اختيار مبلغ الادخار المستهدف وكذلك تحديد مواعيد الاستحقاق المستهدفة لتتلاءم مع احتياجاته سواء كانت تقاعد، تعليم أو زواج الأبناء كما يقوم المؤمن عليه باختيار مبالغ الحماية التأمينية ضد أخطار الوفاة والتي تمتد حتى سن الخامسة والثمانين، وكذلك ضد أخطار العجز والأمراض الحرجة والتي تمتد حتى سن الخامسة والستين ويتميز هذا البرنامج بالمرونة في سداد الأقساط من خلال العديد من الاختيارات التي تقدمها الشركة"
+    },
+
+    "imgRight": false,
+    "proLink": "/sarwa-insurance/product/motorInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLifeDisability.jpg",
+    "title": {
+      "en": "Life & Disability Coverage",
+      "ar": "ثروة أمان (تجديد تلقائى بدون دراسة)"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "A yearly renewable policy that covers insured against death, disabilities & critical illnesses at a very competitive cost. In addition, the policy offers a guaranteed renewable for 5 years without repeating medical checkups.",
+      "ar": "برنامج التأمين على الحياة المؤقت الذي يوفر حماية للمؤمن عليه ضد أخطار الوفاة والعجز لمدة سنة بشروط وتكلفة مناسبة تتلاءم مع إمكانيات جميع الأفراد كما يقدم البرنامج ميزة إضافية للمؤمن عليهم حيث يقوم البرنامج بضمان الأسعار حتى مدة خمس سنوات وبدون كشف طبي إضافي"
+    },
+    "imgRight": true,
+    "proLink": "/sarwa-insurance/product/homeInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveDisabilityLong.jpg",
+    "title": {
+      "en": "Life & Disability Long Term Coverage",
+      "ar": "ثروة لايف (ادخار)"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "This unique coverage allows insured who are requesting life & disability insurance for long terms (up to 7 years) to have such coverage for an equal premium during the tenor of the policy & with only one medical checkup at the policy start date. ",
+      "ar": "برنامج متميز للتأمين ضد مخاطر الوفاة والعجز لمدة تمتد حتى سبع سنوات مع قسط سنوي ثابت طوال مدة التأمين وبدون أي كشف طبي إضافي خلال المدة"
+    },
+    "imgRight": false,
+    "proLink": "/sarwa-insurance/product/personalAccidents"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveMaleCancer.jpg",
+    "title": {
+      "en": "He (Male Cancer)",
+      "ar": "الحماية ضد أخطار السرطان للرجال"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "A very low-cost policy with a high protection value against male cancer diseases (malignant diseases of prostate, penis, testes, spermatic cord, scrotum, seminal vesicles, tunica vaginalis).",
+      "ar": "من أفضل برامج الحماية ضد مخاطر السرطان للرجال ويتميز بتكلفة قليلة لا تتعدى عدة جنيهات"
+    },
+    "imgRight": true,
+    "proLink": "/sarwa-insurance/product/product-3"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveFemaleCancer.jpg",
+    "title": {
+      "en": "She (Female Cancer)",
+      "ar": "من أفضل برامج الحماية ضد مخاطر السرطان للرجال ويتميز بتكلفة قليلة لا تتعدى عدة جنيهات"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "A very low-cost policy with a high protection value against female cancer diseases (malignant tumors of the breast, vulva, vagina, cervix, uterus, ovary, fallopian tubes, placenta) - cosmetic surgery benefit to the affected parts because of female cancer, if needed. ",
+      "ar": "من أفضل برامج الحماية ضد مخاطر السرطان للإناث ويتميز بتكلفة قليلة لا تتعدى عدة جنيهات"
+    },
+    "imgRight": false,
+    "proLink": ""
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveSmokers.jpg",
+    "title": { "en": "Smokers", "ar": "الحماية ضد أخطار التدخين" },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "An adequate cost policy that insures the person in case diagnosed with one of the smoker critical illnesses (lung cancer, oral cavity and pharynx cancer, end-stage lung disease, heart attack, stroke)",
+      "ar": "بتكلفة مناسبة يقدم هذا البرنامج الحماية ضد الأمراض الحرجة الرئيسية وتشمل سرطان الرئة، سرطان الفم والبلعوم، الجلطة والأزمة القلبية، وهي الأمراض التي يكون التدخين غالباً هو السبب الرئيسي لحدوثها "
+    },
+    "imgRight": true,
+    "proLink": ""
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "pLink": "../SARWA ANNOUNCEMENT.jpg",
+    "title": {
+      "en": "Announcement for Policy Holders",
+      "ar": "إعلان هام لحملة الوثائق"
+    },
+    "date": "31/03/2022",
+    "text": {
+      "en": "Re-evaluate the sum insured of vehicle , Equipment and any other properties to reflect the increase",
+      "ar": "مراجعة و تعديل مبالغ تأمين السيارات ، المعدات  أى ممتلاكات أخرى مؤمن عليها وفقاً للقيم السوقية الحالية"
+    },
+    "imgUrl": {
+      "en": "https://contact-clients-dev.s3.amazonaws.com/FooterInsuranceLogoEn.png",
+      "ar": "https://contact-clients-dev.s3.amazonaws.com/FooterInsuranceLogoAr.png"
+    }
+  },
+  {
+    "pLink": "../11.pdf",
+    "title": {
+      "en": "Re-evaluate the sum insured of vehicle , Equipment and any other properties to reflect the increase",
+      "ar": "أرتفاع نسبة القيمة السوقية  - وسطاء التأمين"
+    },
+    "date": "31/03/2022",
+    "text": {
+      "en": "Re-evaluate the sum insured of vehicle , Equipment and any other properties to reflect the increase",
+      "ar": "مراجعة و تعديل مبالغ تأمين السيارات ، المعدات  أى ممتلاكات أخرى مؤمن عليها وفقاً للقيم السوقية الحالية"
+    },
+    "imgUrl": {
+      "en": "https://contact-clients-dev.s3.amazonaws.com/FooterInsuranceLogoEn.png",
+      "ar": "https://contact-clients-dev.s3.amazonaws.com/FooterInsuranceLogoAr.png"
+    }
+  },
+  {
+    "pLink": "../22.pdf",
+    "title": {
+      "en": "Market Value Increasing Letter - Customers",
+      "ar": "أرتفاع نسبة القيمة السوقية  - عملاء"
+    },
+    "date": "31/03/2022",
+    "text": {
+      "en": "Re-evaluate the sum insured of vehicle , Equipment and any other properties to reflect the increase",
+      "ar": "مراجعة و تعديل مبالغ تأمين السيارات ، المعدات  أى ممتلاكات أخرى مؤمن عليها وفقاً للقيم السوقية الحالية"
+    },
+    "imgUrl": {
+      "en": "https://contact-clients-dev.s3.amazonaws.com/FooterInsuranceLogoEn.png",
+      "ar": "https://contact-clients-dev.s3.amazonaws.com/FooterInsuranceLogoAr.png"
+    }
+  }
+]

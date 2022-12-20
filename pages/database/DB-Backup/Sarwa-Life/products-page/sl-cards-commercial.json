@@ -1,0 +1,121 @@
+[
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveGroupLife.jpg",
+    "title": {
+      "en": "Group Life & Disability",
+      "ar": "وثيقة تأمين جماعي - حماية"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "A product that offers benefits to corporate accounts covering their employees against death, permanent total disability & permanent partial disability at a preferred cost & simplified enrollment procedure.",
+      "ar": "يقدم هذا المنتج حماية متميزة ضد أخطار الوفاة أو العجز الكامل الدائم أو العجز الجزئي الدائم لموظفي الشركات وذلك بتكلفة متميزة وشروط التحاق ميسرة"
+    },
+    "imgRight": false,
+    "proLink": ""
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveGroupCreditLife.jpg",
+    "title": {
+      "en": "Group Credit Life",
+      "ar": "وثيقة تأمين جماعي - إئتمان"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "A product that offers benefits to the borrowers against death & permanent total disability. In such incidents, the insurance company will pay to the bank the outstanding balance of the loan.",
+      "ar": "يقدم هذا البرنامج حماية تأمينية متميزة للمقترضين ضد أخطار الوفاة والعجز الكلي، حيث تقوم الشركة بسداد رصيد القرض نيابة عن المؤمن عليه في حالة وفاته أو إصابته بأي من حالات العجز الكلي لا قدر الله"
+    },
+    "imgRight": true,
+    "proLink": ""
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLivePension.jpg",
+    "title": {
+      "en": "Group Pension",
+      "ar": "وثيقة تأمين جماعي - استثمار"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "A group saving plans that provide long-term & flexible saving solutions that financially support employees at retirement.",
+      "ar": "يتميز هذا البرنامج بتقديم حلول مرنة من حيث التكلفة وتصميم المزايا بهدف دفع مكافأة نهاية خدمة مناسبة للعاملين عند بلوغ سن التقاعد"
+    },
+    "imgRight": false,
+    "proLink": ""
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLivePersonal.jpg",
+    "title": {
+      "en": "Group Personal Accidents",
+      "ar": "وثيقة تأمين جماعي - حوادث شخصية"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "Group personal accidents policy provides financial coverage against unforeseen events causing accidental death, total permanent disability & partial permanent disability due to accidents at a very competitive cost.",
+      "ar": "يقدم هذا البرنامج التأميني حماية متميزة للعاملين بالشركات ضد أخطار الحوادث الشخصية (وفاة أو عجز) وتتميز هذه البرامج بتكلفتها المنخفضة والتي تسمح لأصحاب الأعمال باختيار مبالغ حماية تأمينية مرتفعة مقابل تكلفة زهيدة من الأقساط"
+    },
+    "imgRight": true,
+    "proLink": ""
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveMedical.jpg",
+    "title": {
+      "en": "Group Medical",
+      "ar": "وثيقة تأمين طبي جماعي"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "Group insurance coverage for employees against medical risks can be extended to include dental, optical & maternity benefits. The plans are designed to provide the most adequate level of services based on ourDirectors settlement arrangements. Accordingly, the insured will not pay out of their pockets against medical services within the contracted medical network.",
+      "ar": "يوفر هذا البرنامج حماية متميزة للعاملين بالشركات لتغطية مصروفات العلاج الطبي والتي قد تمتد لتشمل مزايا علاج الأسنان والبصريات والمزايا الخاصة بالحمل والولادة ويهدف هذا البرنامج لتقديم أفضل مستويات الخدمة بنظام للسداد المباشر داخل الهيئة الطبية"
+    },
+    "imgRight": false,
+    "proLink": ""
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveGroupLifeEnterprises.jpg",
+    "title": {
+      "en": "Small & Medium Enterprises Packages (SME’S)",
+      "ar": "(SME’S) الشركات المتوسطة والصغيرة"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "Designed for small corporations starting from 5 members up to 250 members. The plan provides a prepackaged life, disability & medical benefits that suits all employment levels. In the meantime, all plans are re-priced, accordingly employers can automatically choose their plans & enroll their employees.",
+      "ar": "يعد هذا البرنامج هو الأفضل للشركات الصغيرة والمتوسطة حيث يقدم عدد من برامج العلاج الطبي والتأمين على الحياة وضد أخطار العجز وتتنوع هذه البرامج من حيث المزايا والتكلفة لتتناسب مع احتياجات المستويات الوظيفية المختلفة داخل الشركة الواحدة كما تتميز هذه البرامج بكونها سابقة التسعير حيث يتمكن أصحاب الأعمال من اختيار البرامج الملائمة بصورة مباشرة وإدراج العاملين المراد تغطيتهم تأمينياً"
+    },
+    "imgRight": true,
+    "proLink": ""
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductLiveVoluntary.jpg",
+    "title": {
+      "en": "Voluntary Personal Accidents Plan",
+      "ar": "وثيقة تأمين جماعي - حوادث شخصية اختياري"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "A plan that provides protection against personal accidents risks (death & disability) at a very low cost. Typically, the plan is designed to provide an additional protection benefits on a voluntary basis to employees, who will pay the low-cost premium monthly as a payroll deduction.",
+      "ar": "ويمثل هذا البرنامج حماية تأمينية إضافية ضد مخاطر الحوادث الشخصية (وفاة أو عجز)، حيث يقوم كل موظف باختيار مبالغ الحماية التأمينية والتي يقوم بسداد تكلفتها بصورة شهرية"
+    },
+    "imgRight": false,
+    "proLink": ""
+  }
+]

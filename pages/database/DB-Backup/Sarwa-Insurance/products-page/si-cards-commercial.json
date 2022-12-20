@@ -1,0 +1,102 @@
+[
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsProperty.jpg",
+    "title": {
+      "en": "Property Insurance",
+      "ar": "تأمين الممتلكات"
+    },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "Without appropriate insurance, property losses can easily cause the entire enterprise to suffer. Your business assets aren't just expensive – they keep your business running.",
+      "ar": "إن أهمية أصول الشركة ليست في قيمتها فقط ولكن في كونها الأساس لإستمرار الأعمال, مع وثيقة ثروة للتأمين للممتلكات نغطي أصول وممتلكات الشركة ضد   الأخطار الغير متوقعة مثل الحرائق والانفجارات والكوارث الطبيعية والسطو وما إلى   ذلك"
+    },
+    "imgRight": false,
+    "proLink": "/sarwa-insurance/product/propertyInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsEngineering.jpg",
+
+    "title": {
+      "en": "Engineering Insurance",
+      "ar": "التأمينات الهندسية"
+    },
+    "subtitle": {
+      "en": "Full Protection For Owners & Contractors",
+      "ar": "الحماية الكاملة لكل من المالكين والمقاولين"
+    },
+    "text": {
+      "en": "Our Engineering Insurance Programs covers many vital scopes from power and public utilities, all the way to construction, infrastructure and civil engineering projects.",
+      "ar": "تقدم ثروة للتأمين برامج تأمين هندسي تناسب كافة المشروعات سواء كانت مشروعات بناء مباني أو محطات كهرباء أو مياه أو بنية تحتية أو غيرها من المشروعات"
+    },
+    "imgRight": true,
+    "proLink": "/sarwa-insurance/product/engineeringInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsMotorFleet.jpg",
+    "title": {
+      "en": "Motor Fleet Insurance",
+      "ar": "تأمين أساطيل السيارات"
+    },
+    "subtitle": {
+      "en": "Safely On The Road To Success",
+      "ar": "نساعدك على استمرار اعمالك"
+    },
+    "text": {
+      "en": "Keeping your business running on the road safely at all times, Motor Fleet insurance is offered to business-owned vehicles and corporate fleets.",
+      "ar": "نحن ندرك أهمية أن يكون اسطول سيارات شركتك يعمل بكفاءة دائمة  لذلك صممنا وثائقنا لتضمن الإصلاح السريع لسيارات شركتك مع الحفاظ على  أعلى درجات الجودة"
+    },
+    "imgRight": false,
+    "proLink": "/sarwa-insurance/product/motorFleetInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsMarine.jpg",
+    "title": {
+      "en": "Marine Insurance",
+      "ar": "التأمين البحري والبري بضائع"
+    },
+    "subtitle": {
+      "en": "Covering All Things Marine",
+      "ar": ""
+    },
+    "text": {
+      "en": "We help your business continuity by protecting the logistical movement of goods or services. We insure your cargo transported by sea, air or inland.",
+      "ar": "ثروة للتأمين تساعدك على استمرار أعمالك بتقديم حماية شاملة للحركة اللوجستية للبضائع المنقولة بحراً أو براً أو جواً,   وثائقنا تغطي بضاعتك طبقاً لشروط التأمين الدولية"
+    },
+    "imgRight": true,
+    "proLink": "/sarwa-insurance/product/marineInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsPublicLiability.jpg",
+    "title": {
+      "en": "Public Liability Insurance (PL)",
+      "ar": "تأمين المسؤوليات والتأمينات المالية"
+    },
+    "subtitle": {
+      "en": "SARWA Insurance provides Public Liability insurance to cover you against any claims made against your business – for example, if you were held",
+      "ar": "تقدم ثروة للتأمين هذا النوع من التأمين لحماية أعمالك ضد أي أحكام قضائية قد يحكم بها ضد شركتك في حال حدوث  أي إصابات جسدية أو أضرار بممتلكات الغير بسبب اعمال الشركة"
+    },
+    "text": {
+      "en": "",
+      "ar": ""
+    },
+    "imgRight": false,
+    "proLink": "/sarwa-insurance/product/publicLiabilityInsurance"
+  },
+  {
+    "imgUrl": "https://contact-clients-dev.s3.amazonaws.com/ProductInsMedical.jpg",
+    "title": { "en": "Medical Insurance", "ar": "تأمين طبي" },
+    "subtitle": {
+      "en": "",
+      "ar": ""
+    },
+    "text": {
+      "en": "In the Health Insurance Industry field, we are determined to establish a successful and sustainable partnership with our customers. We strive to be a beacon of success that attracts clients",
+      "ar": "في مجال التأمين الطبي، ثروة للتأمين تصمم دائماً على إقامة شراكة ناجحة ومستدامة مع عملائها, نحن نسعى جاهدين لنكون منارة النجاح التي تجذب العملاء بأن نكون دوماً على مستوى توقعاتهم"
+    },
+    "imgRight": true,
+    "proLink": "/sarwa-insurance/product/medicalInsurance"
+  }
+]

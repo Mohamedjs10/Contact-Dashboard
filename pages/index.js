@@ -7,7 +7,8 @@ export default function Home() {
 
   return (
     <>
-      {!authenticated ? (
+      {/* {!authenticated ? ( */}
+      {false ? (
         <Box sx={{ backgroundColor: "#dfe3ee" }}>
           <Login setauthenticated={setauthenticated}></Login>
         </Box>
